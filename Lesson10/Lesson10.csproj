@@ -168,10 +168,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\InterviewController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
+    <Compile Include="Controllers\RemoteValidationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\MustBeFutureDateAttribute.cs" />
+    <Compile Include="Infrastructure\UsernameIsUniqueAttribute.cs" />
+    <Compile Include="Infrastructure\UserRepository.cs" />
     <Compile Include="Models\Interviewee.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -194,6 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\RemoteValidation\" />
     <Folder Include="Views\User\" />
   </ItemGroup>
   <PropertyGroup>

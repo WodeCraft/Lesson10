@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Lesson10.Infrastructure;
+using System.ComponentModel.DataAnnotations;
 
 namespace Lesson10.Models
 {
@@ -9,6 +10,8 @@ namespace Lesson10.Models
         public string Fullname { get; set; }
 
         [Required]
+        //[Remote("UniqueUserName", "RemoteValidation")]
+        [UsernameIsUnique()]
         public string Username { get; set; }
 
         [Required]
@@ -16,7 +19,7 @@ namespace Lesson10.Models
         public string Password { get; set; }
 
         [Required]
-        [Compare("Password")]
+        [System.ComponentModel.DataAnnotations.Compare("Password")]
         public string ConfirmPassword { get; set; }
 
         [Required]
