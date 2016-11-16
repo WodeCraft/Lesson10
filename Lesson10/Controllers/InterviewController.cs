@@ -3,27 +3,12 @@ using System.Web.Mvc;
 
 namespace Lesson10.Controllers
 {
-    public class RegistrationController : Controller
+    public class InterviewController : Controller
     {
-        // GET: Registration
+        // GET: Interview
         public ActionResult Index()
         {
             return View();
-        }
-
-        public ActionResult CreateBooking()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult CreateBooking(User user)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-            return View("Completed", user);
         }
 
         public ActionResult CreateInterview()
@@ -38,8 +23,7 @@ namespace Lesson10.Controllers
             {
                 return View();
             }
-            return View("InterviewCompleted", interviewee);
+            return View("Completed", interviewee);
         }
-
     }
 }

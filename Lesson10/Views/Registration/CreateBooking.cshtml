@@ -2,7 +2,6 @@
 
 @{
     ViewBag.Title = "CreateBooking";
-    ViewContext.ClientValidationEnabled = true;
 }
 
 <h2>CreateBooking</h2>
@@ -11,7 +10,6 @@
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
-    //Html.EnableClientValidation();
 
     <div class="form-horizontal">
         <h4>User</h4>
