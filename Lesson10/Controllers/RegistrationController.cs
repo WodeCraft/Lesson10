@@ -23,7 +23,7 @@ namespace Lesson10.Controllers
             {
                 return View();
             }
-            return View("Completed");
+            return View("Completed", user);
         }
     }
 }
